@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+}
+
+.cell {
+  border: 1px solid #000a;
+  aspect-ratio: 1;
+  user-select: none;
+}
+
+.active {
+  background-color: yellow;
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border: 1px solid black;
+}
+
+.colorSelector {
+  display: flex;
+  position: absolute;
+  gap: 0.2rem;
+  background-color: white;
+  padding: 0.2rem;
+  border: 1px solid black;
+}
+
+.colorSelector_active {
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.2s;
+}
+
+.colorSelector_closed {
+  pointer-events: none;
+  animation-name: fadeOut;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
