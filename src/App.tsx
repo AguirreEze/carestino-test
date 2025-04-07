@@ -5,7 +5,7 @@ import Cell from "./Cell";
 function App() {
   const [activeColor, setActiveColor] = useState("yellow");
   const [colorSelect, setColorSelect] = useState(false);
-  const [position, setPosition] = useState([0, 0]);
+  const [position, setPosition] = useState([-100, -100]);
 
   function getCellCount() {
     const columns = 100;
